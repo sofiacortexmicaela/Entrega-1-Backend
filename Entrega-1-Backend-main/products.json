@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "producto 1",
+    "description": "descripcion 100",
+    "code": "abc",
+    "price": 100,
+    "status": false,
+    "stock": 1,
+    "thumbnail": "url"
+  },
+  {
+    "id": 2,
+    "title": "producto 1",
+    "description": "descripcion 1",
+    "code": "abc123",
+    "price": 100,
+    "status": true,
+    "stock": 10,
+    "thumbnail": "url"
+  },
+  {
+    "id": 3,
+    "title": "producto 1",
+    "description": "descripcion 1",
+    "code": "abc123",
+    "price": 100,
+    "status": true,
+    "stock": 10,
+    "thumbnail": "url"
+  }
+]

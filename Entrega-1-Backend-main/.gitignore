@@ -1,0 +1,16 @@
+/node_modules
+/dist
+/build
+/logs
+/temp
+/config.json
+/secrets.json
+/env
+/.env
+/.idea
+/.vscode
+/npm-debug.log
+/yarn-debug.log
+/yarn-error.log
+/package-lock.json
+/yarn.lock

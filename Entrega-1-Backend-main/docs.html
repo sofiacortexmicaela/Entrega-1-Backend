@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Documentación</h1>
+    <div>
+        <h2>Entrega N° 1</h2>
+        <h3>Descripción General</h3>
+        <p>Desarrollar un servidor que contenga los endpoints y servicios necesarios para gestionar los productos y carritos de compra para tu API.</p>
+        
+        <h2>Requisitos de la Primera Entrega</h2>
+        <h3>Desarrollo del Servidor</h3>
+        <p>El servidor debe estar basado en Node.js y Express, y debe escuchar en el puerto 8080. Se deben disponer dos grupos de rutas: /products y /carts. Estos endpoints estarán implementados con el router de Express, con las siguientes especificaciones:</p>
+        
+        <h3>Rutas para Manejo de Productos (/api/products/)</h3>
+        <h3>GET /:</h3>
+        <p>Debe listar todos los productos de la base de datos.</p>
+        
+        
+        <h3>GET /:pid:</h3>
+        <p>Debe traer solo el producto con el id proporcionado.</p>
+        
+        
+        <h3>POST /:</h3>
+        <p>Debe agregar un nuevo producto con los siguientes campos:
+            id: Number/String (No se manda desde el body, se autogenera para asegurar que nunca se repitan los ids).
+            <ol>title: String</ol>
+            <ol>description: String</ol>
+            <ol>code: String</ol>
+            <ol>price: Number</ol>
+            <ol>status: Boolean</ol>
+            <ol>stock: Number</ol>
+            <ol>category: String</ol>
+            <ol>thumbnails: Array de Strings (rutas donde están almacenadas las imágenes del producto).</ol>
+        </p>
+        <h3>PUT /:pid:</h3>
+                <p>Debe actualizar un producto por los campos enviados desde el body. No se debe actualizar ni eliminar el id al momento de hacer la actualización.</p>
+                
+                <h3>DELETE /:pid:</h3>
+                <p>Debe eliminar el producto con el pid indicado.</p>
+                
+                <h3>Rutas para Manejo de Carritos (/api/carts/)</h3>
+                
+                <h3>POST /:</h3>
+        <p>Debe crear un nuevo carrito con la siguiente estructura:
+            <ol>id: Number/String (Autogenerado para asegurar que nunca se dupliquen los ids).</ol>
+            <ol>products: Array de objetos con la siguiente estructura:</ol>
+
+        </p>
+        <h3>GET /:cid:</h3>
+        
+        <p>Debe listar los productos que pertenecen al carrito con el cid proporcionado.</p>
+        
+        <h3>POST /:cid/product/:pid:</h3>
+        <p>Debe agregar el producto al arreglo products del carrito seleccionado, utilizando el siguiente formato:
+            <ol>product: Solo debe contener el ID del producto.</ol>
+            <ol>quantity: Debe contener el número de ejemplares de dicho producto (se agregará de uno en uno).</ol>
+            <ol>Si un producto ya existente intenta agregarse, se debe incrementar el campo quantity de dicho producto.</ol>
+        </p>
+        <h3>Persistencia de la Información</h3>
+       
+        <p>La persistencia se implementará utilizando el sistema de archivos, donde los archivos products.json y carts.json respaldarán la información.</p>
+        
+        <p>Se debe utilizar el ProductManager desarrollado en el desafío anterior y crear un CartManager para gestionar el almacenamiento de estos archivos JSON.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "entrega-1",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "Api.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node Api.js",
+    "dev": "node --watch Api.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
